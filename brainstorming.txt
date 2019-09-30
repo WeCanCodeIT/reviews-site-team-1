@@ -12,3 +12,9 @@ Tags:
 		○ Footwear
 		○ Outerwear
 		○ Accessories
+
+    -sports eq
+        -soccer
+        -basketball
+        -football
+        
