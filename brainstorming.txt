@@ -1,0 +1,14 @@
+Recreation- Recreation-reviews
+
+	- Product 
+Tags:
+	- Outdoor
+		○ Fishing
+		○ Camping
+		○ Hiking
+		○ Hunting/shooting
+		○ Bullet proof vest
+	- Apparel
+		○ Footwear
+		○ Outerwear
+		○ Accessories
