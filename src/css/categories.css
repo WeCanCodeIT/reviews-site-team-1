@@ -42,7 +42,27 @@
     align-content: center;
     border: 1px solid rgba(0, 0, 0, .2);
     background-color: red;
+
+    
 }
+
+.btn {
+    color:black;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+  }
+  
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
 
  /*
 .card { 
