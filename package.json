@@ -1,0 +1,23 @@
+{
+  "name": "reviews-site-team-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --colors --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeCanCodeIT/reviews-site-team-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeCanCodeIT/reviews-site-team-1/issues"
+  },
+  "homepage": "https://github.com/WeCanCodeIT/reviews-site-team-1#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
