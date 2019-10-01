@@ -1,0 +1,49 @@
+
+
+.review__grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: auto;
+    grid-template-areas: "item item item"
+                        "date date rating"
+                        "title title title"
+                        "review review review";
+    border: 2px solid black;
+    justify-content: center;
+    justify-items: stretch;
+    
+    width: 350px;
+    
+ 
+    
+    
+}
+.review__grid-item {
+    grid-area: item;
+    text-align: center;
+    border-bottom: 5px solid black;
+    margin: 5px;
+}
+.review__grid-title {
+    grid-area: title;
+    margin: auto;
+    font-style: italic;
+}
+.review__grid-date {
+    grid-area: date;
+    font-size: 1.1em;
+    margin: auto;
+}
+.review__grid-rating {
+    grid-area: rating;
+}
+.review__grid-review {
+    grid-area: review;
+    border: 1px solid black;
+    padding: 1rem;
+}
+.review__wrapper {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
