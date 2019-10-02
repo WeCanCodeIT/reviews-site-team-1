@@ -1,0 +1,28 @@
+* {
+
+}
+
+body {
+    display: grid;
+    grid-auto-rows: 80px auto 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+main {
+    display: grid;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    min-width: 365px;
+}
