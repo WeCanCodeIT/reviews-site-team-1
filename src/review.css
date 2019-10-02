@@ -7,7 +7,9 @@
     grid-template-areas: "item item item"
                         "date date rating"
                         "title title title"
-                        "review review review";
+                        "review review review"
+                        "usertags . ."
+                        "tag tag tag";
     border: 2px solid black;
     justify-content: center;
     justify-items: stretch;
@@ -41,6 +43,13 @@
     grid-area: review;
     border: 1px solid black;
     padding: 1rem;
+}
+.review__grid-usertags{
+    grid-area: usertags;
+    margin: 0;
+}
+.review__grid-tag{
+    grid-area: tag;
 }
 .review__wrapper {
     width: 500px;
