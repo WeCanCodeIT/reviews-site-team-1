@@ -8,8 +8,12 @@ body {
 }
 
 footer {
+    grid-template-columns: 1/4;
+    grid-row:3;
     display: flex;
     justify-content: center;
+    border: 2px solid black;
+    
 }
 
 header {
@@ -19,10 +23,17 @@ header {
 
 main {
     display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto;
 }
 
 .main-title {
     display: flex;
     justify-content: center;
     min-width: 365px;
+}
+
+
+.review__grid-container{
+    border-bottom: 5px solid black;
 }
