@@ -1,7 +1,6 @@
 {
   "name": "reviews-site-team-1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --colors --watchAll"
@@ -19,5 +18,10 @@
   "homepage": "https://github.com/WeCanCodeIT/reviews-site-team-1#readme",
   "devDependencies": {
     "jest": "^24.9.0"
-  }
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^1.7.0"
+  },
+  "description": ""
 }
