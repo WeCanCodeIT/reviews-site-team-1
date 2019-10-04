@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,11 @@
     "jest": "^24.9.0"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
-    "mysql2": "^1.7.0"
+    "morgan": "^1.9.1",
+    "mysql2": "^1.7.0",
+    "nodemon": "^1.19.3"
   },
   "description": ""
 }
