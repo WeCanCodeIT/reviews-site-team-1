@@ -19,11 +19,11 @@ class IndexController{
         res.redirect("/")
             };
 
-    static getReviews(req, res){
-        r.findAll().then(result => {
-          })
-        res.render("index", { reviews : result});
-    }
+    // static getReviews(req, res){
+    //     r.findAll().then(result => {
+    //       })
+    //     res.render("index", { reviews : result});
+    // }
     
     
 }
