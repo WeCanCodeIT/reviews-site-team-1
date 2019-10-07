@@ -1,2 +1,24 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+<p>{{age}} is kinda young as fuck<p>
+
+   <ul>
+        {{#each review}}
+        <li>
+            <span>{{review.title}}</span>
+            <span>{{content}}</span>
+            <span>{{category}}</span>
+            <span>{{rating}}</span>
+            <span>{{tags}}</span>
+        </li>
+        {{/each}}
+    </ul>
+
+ <form action="/" method="POST">
+        <label>Title: <input type="text" name="title" /></label>
+        <label>Rating: <input type="text" name="rating" /></label>
+        <label>Content: <input type="text" name="content" /></label>
+        <label>Category: <input type="text" name="category" /></label>
+        <label>Tags: <input type="text" name="tags" /></label>
+        <button>Submit</button>
+</form>

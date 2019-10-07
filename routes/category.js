@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-const category = require('../controllers/category');
+const CategoryController = require('../controllers/category');
 
 
 /* GET Category */
-router.get('/', category.trial);
+router.get('/', CategoryController.index);
 
 module.exports = router;

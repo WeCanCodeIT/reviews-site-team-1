@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const IndexController = require("../controllers/index");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', IndexController.getReviews);
+
+// POST Request//
+router.post('/', IndexController.addReview);
 
 module.exports = router;
