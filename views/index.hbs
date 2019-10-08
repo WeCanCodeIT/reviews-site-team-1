@@ -2,17 +2,17 @@
 <p>Welcome to {{title}}</p>
 <p>{{age}} is kinda young as fuck<p>
 
-   {{!-- <ul>
-        {{#each review}}
+   <ul>
+        {{#each reviews}}
         <li>
-            <span>{{review.title}}</span>
+            Titles : <span>{{this.title}}</span>
             <span>{{content}}</span>
             <span>{{category}}</span>
             <span>{{rating}}</span>
             <span>{{tags}}</span>
         </li>
         {{/each}}
-    </ul> --}}
+    </ul>
 
  <form action="/" method="POST">
         <label>Title: <input type="text" name="title" /></label>
