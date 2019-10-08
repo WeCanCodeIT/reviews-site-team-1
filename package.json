@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "jest --watchAll --colors"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
     "morgan": "^1.9.1",
     "mysql2": "^1.7.0",
     "nodemon": "^1.19.3",
-    "sequelize": "^5.19.4"
+    "sequelize": "^5.19.4",
+    "supertest": "^4.0.2"
   },
   "description": ""
 }
