@@ -1,9 +1,10 @@
 
 class Category{
-    constructor( name, products){
+    constructor( category){
        
-        this.name = name;
-        this.products = products;
+        this.category = category;
+        // this.name = name;
+        // this.products = products;
         
     }
 }

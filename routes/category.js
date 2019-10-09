@@ -6,5 +6,9 @@ const CategoryController = require('../controllers/category');
 
 /* GET Category */
 router.get('/', CategoryController.index);
+router.post("/", CategoryController.post);
+
+
+
 
 module.exports = router;
