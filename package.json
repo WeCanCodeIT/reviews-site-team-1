@@ -28,7 +28,7 @@
     "morgan": "^1.9.1",
     "mysql2": "^1.7.0",
     "nodemon": "^1.19.3",
-    "sequelize": "^5.19.4",
+    "sequelize": "^5.19.5",
     "supertest": "^4.0.2"
   },
   "description": ""
