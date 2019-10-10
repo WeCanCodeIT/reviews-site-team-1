@@ -1,16 +1,18 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+<a href="/category">
+    <button>Categories</button>
+</a>
+<a href="/reviews">
+    <button>View Reviews</button>
+</a>
+<a href="/submit-review">
+    <button>Submit New Reviews</button>
+</a>
+<a href="/tag">
+    <button>Tag</button>
+</a>
 
-   <ul>
-        {{#each reviews}}
-        <li>
-            Titles : <span>{{this.title}}</span>
-            <span>{{content}}</span>
-            <span>{{category}}</span>
-            <span>{{rating}}</span>
-            <span>{{tags}}</span>
-        </li>
-        {{/each}}
-    </ul>
+  
 
  
