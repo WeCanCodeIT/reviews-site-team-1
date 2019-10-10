@@ -4,10 +4,11 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize(
   'library', // db name
   'root', // db username
-  'Password12!@#', // db password
+  'password', // db password
   { // config object
     dialect: 'mysql', // type of db
-    host: 'localhost' // db hosting location
+    host: 'localhost', // db hosting location
+    // insecureAuth: 'true'
   }
 )
 
