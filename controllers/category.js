@@ -3,9 +3,18 @@ const category = require("../utils/category");
 
 class CategoryController{
     static  index(req, res){
-        res.render('index', { 
-            title: 'Red Hawk reviews', 
+        res.render('view', { 
+            title: '', 
             });
+    }
+
+
+    static post(req, res){
+        // res.render('view')
+        const category0 = req.body.category;
+        const variable = new Category(category0);
+        category.create(variable);
+        res.redirect('/tables');
     }
 }
 
