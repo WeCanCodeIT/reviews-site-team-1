@@ -1,6 +1,6 @@
 const ReviewDomainObject = require("../Model/Review");
 const reviewService = require("../services/review-service");
-
+const Tags = require("../utils/tags");
 
 class ReviewController{
 
