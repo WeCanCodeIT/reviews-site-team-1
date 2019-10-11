@@ -7,7 +7,7 @@ class IndexController{
     static index(req, res){
         res.render('index', { 
             title: 'Red Hawk reviews', 
-            age: 14});  
+            });  
     }
     
     

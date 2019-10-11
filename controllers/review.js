@@ -19,7 +19,12 @@ class ReviewController{
         reviewService.findAll((reviews) => {
         res.render("reviews", { reviews });
         })
+
+    
     };
+    static getNewReviewForm(req, res){
+            res.render("submit-review")
+        }
 }
 
 module.exports = ReviewController;

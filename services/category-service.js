@@ -1,10 +1,21 @@
 const Category = require("../utils/category");
 
+
 module.exports = {
-    findAll (callback) {
-        Category.findAll().then(callback);
+
+    // findAll (callback) {
+    //     Category.findAll().then(callback)
+    // },
+
+    async findAll() {
+        return await Category.findAll()
     },
-    post (category, callback) {
-        Category.create(category).then(callback)
-        }
+
+    // findById (id, callback) {
+    //     Category.findByPk(id).then(callback)
+    //     },
+
+    async findById (id) {
+        return await Category.findByPk(id)
+    }
     };
