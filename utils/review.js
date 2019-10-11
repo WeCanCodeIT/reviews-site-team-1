@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require("./db");
-
 const Review = sequelize.define('review', {
+
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -28,7 +28,6 @@ const Review = sequelize.define('review', {
         type: Sequelize.STRING,
         allowNull: false
     }
-
 
   });
 

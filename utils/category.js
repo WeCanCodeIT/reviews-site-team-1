@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 const sequelize = require("./db");
+const Review = require("./review");
 
-const Category = sequelize.define('category', {
+const Category = sequelize.define('categoryTypes', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -9,12 +10,13 @@ const Category = sequelize.define('category', {
       primaryKey: true
     },
 
-    category: {
+    categoryTitle: {
         type: Sequelize.STRING,
         allowNull: false
     }
+});
 
+Category.belongsToMany(Review, {through: Review});
+Review.belongsTo(Category, {through: Category});
 
-  });
-
-  module.exports = Category;
+module.exports = Category;
