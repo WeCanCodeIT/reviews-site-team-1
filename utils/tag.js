@@ -20,7 +20,7 @@ const Tags = sequelize.define('usertags',{
 
 
 })
-Review.belongsToMany(Tags, {through: 'tag_review' });
+Review.belongsToMany(Tags, {through: 'tagTitle' });
 Tags.belongsToMany(Review, {through: 'tag_review'});
 
 module.exports = Tags

@@ -16,8 +16,8 @@ class ReviewController{
         )}   
 
     static getReviews(req, res){
-        reviewService.findAll((reviews) => {
-        res.render("reviews", { reviews });
+        reviewService.findAll((review) => {
+        res.render("reviews", { review });
         })
 
     
