@@ -9,22 +9,6 @@ class IndexController{
             title: 'Red Hawk reviews', 
             age: 14});  
     }
-    static addReview(req, res){
-        const title = req.body.title;
-        const content= req.body.content;
-        const category = req.body.category;
-        const rating = req.body.rating;
-        const tags = req.body.tags;
-        r.create(new Review(title, content,rating, category, tags));
-        res.redirect("/")
-            };
-
-    static getReviews(req, res){
-        let data = r.findAll().then((data)=>{
-            res.render("index", { reviews : data});
-        });
-        
-    }
     
     
 }

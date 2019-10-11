@@ -1,4 +1,4 @@
-<form action="/" method="POST">
+<form action="/reviews" method="POST">
         <label>Title: <input type="text" name="title" /></label>
         <label>Rating: <input type="text" name="rating" /></label>
         <label>Content: <input type="text" name="content" /></label>
@@ -6,3 +6,15 @@
         <label>Tags: <input type="text" name="tags" /></label>
         <button>Submit</button>
 </form>
+
+ <ul>
+        {{#each reviews}}
+        <li>
+            Titles : <span>{{title}}</span>
+            <span>{{content}}</span>
+            <span>{{category}}</span>
+            <span>{{rating}}</span>
+            <span>{{tags}}</span>
+        </li>
+        {{/each}}
+    </ul>
