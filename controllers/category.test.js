@@ -2,7 +2,7 @@ const CategoryController = require("../controllers/category");
 const categoryService = require("../services/category-service");
 
 describe("categoryController", () => {
-        test("render all should be called one", () =>{
+        test("render all should be called one", async () =>{
             //arrange
         const requestMock = {}
         const responseMock = {
@@ -11,7 +11,7 @@ describe("categoryController", () => {
         categoryService.findAll = jest.fn(() => []);
 
         //act
-        CategoryController.renderAll(requestMock, responseMock);
+        await CategoryController.renderAll(requestMock, responseMock);
 
         //assert
         expect(responseMock.render).toHaveBeenCalledTimes(1)
