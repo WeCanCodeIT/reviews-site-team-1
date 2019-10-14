@@ -14,3 +14,5 @@ class IndexController{
 }
 
 module.exports = IndexController;
+
+//This probably isn't necessary...
