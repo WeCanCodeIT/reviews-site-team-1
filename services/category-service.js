@@ -3,6 +3,8 @@ const Category = require("../utils/category");
 
 module.exports = {
 
+
+
     // findAll (callback) {
     //     Category.findAll().then(callback)
     // },
@@ -18,4 +20,5 @@ module.exports = {
     async findById (id) {
         return await Category.findByPk(id)
     }
+
     };
