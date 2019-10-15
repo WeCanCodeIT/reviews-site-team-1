@@ -2,13 +2,13 @@
 
  <p><a href="/reviews/new")>Add a new Review!</a></p>
  <ul>
-        {{#each reviews}}
+        {{#each review}}
         <li>
-            Titles : <span>{{title}}</span>
+            <span>Titles : <span>{{title}}</span>
             <span>{{content}}</span>
-            <span>{{category}}</span>
+            {{!-- <span>{{category}}</span> --}}
             <span>{{rating}}</span>
-            <span>{{tags}}</span>
+            {{!-- <span>{{tags}}</span> --}}
         </li>
         {{/each}}
     </ul>

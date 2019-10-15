@@ -1,31 +1,36 @@
 const ReviewDomainObject = require("../Model/Review");
 const reviewService = require("../services/review-service");
-
+const categoryService = require("../services/category-service");
+const tagService = require("../services/tag-service");
 
 class ReviewController{
 
-    static newReview(req, res){
+    static async newReview(req, res){
         const title = req.body.title;
         const content= req.body.content;
-        const category = req.body.category;
         const rating = req.body.rating;
-        const tags = req.body.tags;
+        const tagIds = req.body.tag;
+        const categoryId = Number(req.body.category);
         
-        reviewService.addReview(new ReviewDomainObject(title, content, rating, category, tags), (createdReview) => {
-        reviewService.addTags(tags);
-        res.redirect("/reviews")}
-        )}   
-
-    static getReviews(req, res){
-        reviewService.findAll((reviews) => {
-        res.render("reviews", { reviews });
-        })
-
+        const newReview = new ReviewDomainObject(title,content,rating)
     
-    };
-    static getNewReviewForm(req, res){
-            res.render("submit-review")
-        }
-}
+        newReview.categoryId = categoryId;
+        console.log(newReview)
+        console.log(tagIds);
+
+        await reviewService.addReview(newReview, tagIds)
+        
+
+        res.redirect("/reviews")}
+         
+
+    static async getReviews(req, res){
+        res.render("reviews", { review: await reviewService.findAll()});
+        };
+  
+    static async getNewReviewForm(req, res){
+            res.render("submit-review", {category: await categoryService.findAll(), tag: await tagService.findAll()})
+        };
+};   
 
 module.exports = ReviewController;
