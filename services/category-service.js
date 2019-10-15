@@ -1,4 +1,5 @@
 const Category = require("../utils/category");
+const Review = require("../utils/review");
 
 
 module.exports = {
@@ -13,12 +14,15 @@ module.exports = {
         return await Category.findAll()
     },
 
-    // findById (id, callback) {
-    //     Category.findByPk(id).then(callback)
-    //     },
+    async findByReview (id) {
+      return await Review.findAll({
+            where:{categoryId: id}
+        })
+    },
 
     async findById (id) {
         return await Category.findByPk(id)
     }
 
+   
     };

@@ -1,6 +1,7 @@
 const Review = require("../utils/review");
-const TagReview = require("../utils/tag_review");
-const TagReviewDomainObject = require("../Model/TagReview")
+const Tag = require("../utils/tag");
+
+
 module.exports = {
 
     async findAll () {
@@ -9,10 +10,11 @@ module.exports = {
     // findById (id, callback) {
     //   Review.findByPk(id).then(callback)
     // },
-    async addReview (review, tagIds) {
-      await Review.create(review)
-      await tagIds.array.forEach(tagId => {
-        TagReview.create({reviewId: review.id, tagId: tagId});
-      });
+    async addReview (reviewObject,tags) {
+      const newReviews = await Review.create(reviewObject);
+     tags.forEach(tag => {
+       newReviews.addTag(tag)
+     });
     }
+   
   };
