@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%
+}
+
+
+.wrapper {
+    display: grid;
+  grid-auto-rows: 50px;
+  background-color: red;
+  padding: 10px;
+  justify-items: auto center;
+  
+}
+.outdoorstuff {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center ;
+    border: 5px groove rgb(2, 9, 14);
+    border-radius: 25px 22px 27px 32px;
+}
+.apparrelstuff {
+  background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}

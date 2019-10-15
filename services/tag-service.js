@@ -2,10 +2,11 @@ const Tag = require("../utils/tag");
 
 module.exports = {
     async findAll () {
-       return await Tag.findAll()
+
+        return await Tags.findAll()
     },
-  
+
     async findById (id) {
-        await Tag.findByPk(id)
+        return await Tags.findByPk(id)
         }
     };
