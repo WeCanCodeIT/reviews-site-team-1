@@ -3,7 +3,7 @@ const sequelize = require("./db");
 const Review = require("../utils/review");
 
 
-const Tags = sequelize.define('usertags',{
+const Tag = sequelize.define('tag',{
 
     id: {
         type: Sequelize.INTEGER,
@@ -20,7 +20,7 @@ const Tags = sequelize.define('usertags',{
 
 
 })
-Review.belongsToMany(Tags, {through: 'tagTitle' });
-Tags.belongsToMany(Review, {through: 'tag_review'});
+Review.belongsToMany(Tag, {through: 'tag_reviews', foreignKey: 'id'});
+Tag.belongsToMany(Review, {through: 'tag_reviews', foreignKey: 'id' });
 
-module.exports = Tags
+module.exports = Tag;

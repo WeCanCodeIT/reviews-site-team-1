@@ -1,11 +1,11 @@
-const Tags = require("../utils/tag");
+const Tag = require("../utils/tag");
 
 module.exports = {
-    findAll (callback) {
-        Tags.findAll().then(callback)
+    async findAll () {
+       return await Tag.findAll()
     },
-
-    findById (id, callback) {
-        Tags.findByPk(id).then(callback)
+  
+    async findById (id) {
+        await Tag.findByPk(id)
         }
     };
