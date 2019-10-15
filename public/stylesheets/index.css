@@ -2,4 +2,18 @@
     box-sizing: border-box;
     margin: 0%;
     padding: 0%
-  }
+}
+.header {
+  background-color: red;
+  padding: 200px;
+  text-align: center;
+}
+.redbird{
+  position: absolute;
+  border: 450px;
+  border-right: 300px;
+  
+}
+.Title {
+    font-size: 100%;
+}
