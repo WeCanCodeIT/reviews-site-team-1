@@ -1,7 +1,8 @@
-const Tags = require("../utils/tag");
+const Tag = require("../utils/tag");
 
 module.exports = {
     async findAll () {
+
         return await Tags.findAll()
     },
 

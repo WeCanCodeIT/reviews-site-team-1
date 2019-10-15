@@ -1,5 +1,11 @@
 const Sequelize = require('sequelize');
 const sequelize = require("./db");
+
+// const Tag = require("../utils/review");
+// const Category = require("../utils/category");
+
+const TagReview = sequelize.define('user_city');
+
 const Review = sequelize.define('review', {
 
     id: {
@@ -19,16 +25,7 @@ const Review = sequelize.define('review', {
     rating: {
         type: Sequelize.INTEGER,
         allowNull: false
-      },
-    category: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    tags: {
-        type: Sequelize.STRING,
-        allowNull: false
-    }
-
+      }
   });
 
-  module.exports = Review;
+  module.exports = Review, TagReview;
