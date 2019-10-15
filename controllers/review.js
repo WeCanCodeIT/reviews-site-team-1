@@ -12,6 +12,7 @@ class ReviewController{
         const tags = req.body.tags;
         
         reviewService.addReview(new ReviewDomainObject(title, content, rating, category, tags), (createdReview) => {
+        reviewService.addTags(tags);
         res.redirect("/reviews")}
         )}   
 
