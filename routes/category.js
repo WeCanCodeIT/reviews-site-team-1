@@ -6,4 +6,6 @@ const CategoryController = require('../controllers/category');
 /* GET Category */
 router.get('/', CategoryController.renderAll);
 
+router.get("/:id", CategoryController.reviewCateogy);
+
 module.exports = router;

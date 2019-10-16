@@ -5,14 +5,17 @@ module.exports = {
 
 
 
+    // findAll (callback) {
+    //     Category.findAll().then(callback)
+    // },
+
     async findAll() {
         return await Category.findAll()
     },
 
-    async findSome(categoryId) {
-        const selectedCategory = await Category.findAll(categoryId)
-        Category.getReview(categoryId)
-        },
+    // findById (id, callback) {
+    //     Category.findByPk(id).then(callback)
+    //     },
 
     async findById (id) {
         return await Category.findByPk(id)
