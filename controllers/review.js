@@ -12,8 +12,15 @@ module.exports = {
         const rating = req.body.rating;
         
         const categoryId = Number(req.body.category);
-        const tagStringId = Number(req.body.tag);
+
+        const tagStringId = req.body.tag;
         const tagIds = [];
+
+        tagStringId.forEach(tagId => {
+            tagIds.push(Number(tagId))
+        })
+
+        
         tagIds.push(tagStringId);
         const newReview = new ReviewDomainObject(title,content,rating)
     
