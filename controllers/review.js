@@ -11,19 +11,22 @@ module.exports = {
         const content= req.body.content;
         const rating = req.body.rating;
         
-        const categoryId = Number(req.body.category);
+        let tagStringId ;
 
-        const tagStringId = req.body.tag;
+            if(req.body.tag === undefined){
+                tagStringId = [ ]
+            } else if (typeof req.body.tag === 'string') {
+                tagStringId = [req.body.tag]
+            } else {
+                tagStringId = [...req.body.tag ]
+            };
+
         const tagIds = [];
-
         tagStringId.forEach(tagId => {
             tagIds.push(Number(tagId))
         })
+ 
         const newReview = new ReviewDomainObject(title,content,rating)
-    
-        newReview.categoryId = categoryId;
-        
-
         await reviewService.addReview(newReview, tagIds)
         res.redirect("/reviews")
     },
