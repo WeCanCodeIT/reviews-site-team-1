@@ -7,11 +7,22 @@
 <label>
     category:
     <select name="category">
+        
         {{#each category}}
         <p name= "id">{{id}}</p>
-            <option value="{{id}}"></option>
+        <p> {{categoryTitle}}</p>
+            <option value="{{id}}">{{categoryTitle}}</option>
         {{/each}}
     </select>
+
+</label>
+
+<label>
+    {{#each category}}
+    
+    <h3><a href="/categories/{{id}}">{{categoryTitle}}</a></h3>
+     {{/each}}
+
 </label>
 
 <a href="/"> Go back </a>

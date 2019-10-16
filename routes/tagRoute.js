@@ -5,6 +5,8 @@ const TagController = require("../controllers/tagController");
 
 router.get("/", TagController.displayTags);
 
+router.get("/:id", TagController.reviewTag);
+
 
 
 
