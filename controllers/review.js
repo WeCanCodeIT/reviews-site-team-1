@@ -36,5 +36,4 @@ module.exports = {
     async getNewReviewForm(req, res){
         res.render("submit-review", {category: await categoryService.findAll(), tag: await tagService.findAll()})
     }
-
 }

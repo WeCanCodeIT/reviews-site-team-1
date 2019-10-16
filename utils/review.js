@@ -4,7 +4,7 @@ const sequelize = require("./db");
 // const Tag = require("../utils/review");
 // const Category = require("../utils/category");
 
-const TagReview = sequelize.define('user_city');
+
 
 const Review = sequelize.define('review', {
 
@@ -28,4 +28,4 @@ const Review = sequelize.define('review', {
       }
   });
 
-  module.exports = Review, TagReview;
+  module.exports = Review;
