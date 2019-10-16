@@ -19,9 +19,6 @@ module.exports = {
         tagStringId.forEach(tagId => {
             tagIds.push(Number(tagId))
         })
-
-        
-        tagIds.push(tagStringId);
         const newReview = new ReviewDomainObject(title,content,rating)
     
         newReview.categoryId = categoryId;
@@ -36,5 +33,4 @@ module.exports = {
     async getNewReviewForm(req, res){
         res.render("submit-review", {category: await categoryService.findAll(), tag: await tagService.findAll()})
     }
-
 }
