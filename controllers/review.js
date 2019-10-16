@@ -19,9 +19,6 @@ module.exports = {
         tagStringId.forEach(tagId => {
             tagIds.push(Number(tagId))
         })
-
-        
-        tagIds.push(tagStringId);
         const newReview = new ReviewDomainObject(title,content,rating)
     
         newReview.categoryId = categoryId;
