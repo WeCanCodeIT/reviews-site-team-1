@@ -1,0 +1,14 @@
+<div class="container">
+    <a href="/categories">Back to Category Page</a>
+    <h3>Category:{{categoryReview}}</h3>
+    <article class="user-card">
+    
+        <h3 class="user-card__name">{{categoryReview.title}}</h3>
+        
+        <ul>
+            {{#each categoryReview}}
+                <p>{{categoryReview}}</p>
+            {{/each}}
+        </ul>
+    </article>
+</div>

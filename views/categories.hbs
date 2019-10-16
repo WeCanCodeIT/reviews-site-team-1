@@ -1,13 +1,14 @@
 <h1>categories</h1>
 
 {{#each category}}
-        <a href="/{{id}}">{{categoryTitle}}</a>
+        <a href="/categories/{{id}}">{{category}}</a>
 {{/each}}
 
 <label>
     category:
     <select name="category">
         {{#each category}}
+        <p name= "id">{{id}}</p>
             <option value="{{id}}"></option>
         {{/each}}
     </select>
