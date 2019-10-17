@@ -1,13 +1,15 @@
-<div class="container">
-    <h1>{{category.categoryTitle}}</h1>
-        <article class="user-card">  
-            <ul>
-                {{#each category.reviews}}
-                
-                <h3>{{title}}</h3>
-                <p>{{content}}</p>
-                <p>{{rating}}</p>
-                {{/each}}
-            </ul>
-        </article>
-</div>
+<center>
+    <div class="container">
+        <h1>{{category.categoryTitle}}</h1>
+            <article class="user-card">  
+                <ul>
+                    {{#each category.reviews}}
+                    
+                    <h3>{{title}}</h3>
+                    <p>{{content}}</p>
+                    <p>{{rating}}</p>
+                    {{/each}}
+                </ul>
+            </article>
+    </div>
+</center>

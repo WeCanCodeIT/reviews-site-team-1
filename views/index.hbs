@@ -1,44 +1,24 @@
-<header>
-    <div class="header">
-        <div><center><h1>{{title}}</h1></center> </div>
-        <center><p>Welcome to {{title}}</p></center>
-         <div class="redbird"> <img src="https://cdn.pixabay.com/photo/2016/10/26/10/37/bird-1771116__480.png" height="150px" width="300px"></div> 
-    </div>
-</header>
-
-<<<<<<< HEAD
-<div class="navbar"><ul><center><a href="/category">
-=======
-<center><a href="/categories">
->>>>>>> 3cdadd006cbc4769aea4e702eba40c9b1183c46a
-    <button>Categories</button>
-</a>
-{{!-- <a href="/reviews">
-    <button>View Reviews</button>
-</a> --}}
-<a href="/reviews/new">
-    <button>Submit New Reviews</button>
-</a>
-<a href="/tags">
-    <button>Tag</button>
-
-<a href="/reviews" class="direction">
-<button class="direction">
-    Reviews
-</button>
-</a>
-
-
-<<<<<<< HEAD
-<a href="/tags" class="direction">
-<button class="direction">
-    Tags
-</button>
-</a>
-</center></ul></div>
-=======
-
->>>>>>> 3cdadd006cbc4769aea4e702eba40c9b1183c46a
-  
-
- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Red Hawk Reviews</title>
+    <link rel='stylesheet' href='/stylesheets/categories.css' />
+    <link rel='stylesheet' href='/stylesheets/Tags.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css'/>
+  </head>
+  <body>
+    <header class="header"><h1>Red Hawk Reviews</h1></header>
+      <div class="redbird"> <img src="https://cdn.pixabay.com/photo/2016/10/26/10/37/bird-1771116__480.png" height="150px" width="300px"></div> 
+        <nav class="navigation-bar">
+          <ul class="navigation-bar"> 
+            <li class="navigation-bar__item"><a href="/reviews/">Reviews</a></li>
+            <li class="navigation-bar__item"><a href="/reviews/new">Submit New Review</a></li>
+            <li class="navigation-bar__item"><a href="/categories">Categories</a></li>
+            <li class="navigation-bar__item"><a href="/tags/">Tags</a></li>
+          </ul>
+        </nav>
+    </header>
+    {{{body}}}
+  </body>
+  <footer>Review Site - Team 1<br>&copy;WCCI 2019</footer>
+</html>
