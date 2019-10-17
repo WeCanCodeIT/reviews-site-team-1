@@ -10,7 +10,6 @@ module.exports = {
             const categoryId = Number(req.params.id);
             const category = await categoryService.findCategory(categoryId);
             category.reviews = await category.getReviews();
-            res.render("categoryReview", {category})
-          
+            res.render("categoryReview", {category})          
         }
-        }
+    }

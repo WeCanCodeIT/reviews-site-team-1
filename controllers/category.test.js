@@ -2,7 +2,7 @@ const CategoryController = require("../controllers/category");
 const categoryService = require("../services/category-service");
 
 describe("categoryController", () => {
-        test("render all should be called one", async () =>{
+        test("render all should be called once", async () => {
             //arrange
         const requestMock = {}
         const responseMock = {
@@ -17,6 +17,4 @@ describe("categoryController", () => {
         expect(responseMock.render).toHaveBeenCalledTimes(1)
         expect(responseMock.render).toHaveBeenCalledWith("categories", {category: [] })
         })
-        
-    
 });
