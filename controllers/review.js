@@ -11,11 +11,21 @@ module.exports = {
         const rating = req.body.rating;
         const categoryId = Number(req.body.category);
         
-        const categoryId = Number(req.body.category);
-        const tagStringId = req.body.tag;
-        const tagIds = [];
+        let tagStringId ;
 
-        tagIds.push(Number(tagStringId));
+            if(req.body.tag === undefined){
+                tagStringId = [ ]
+            } else if (typeof req.body.tag === 'string') {
+                tagStringId = [req.body.tag]
+            } else {
+                tagStringId = [...req.body.tag ]
+            };
+
+        const tagIds = [];
+        tagStringId.forEach(tagId => {
+            tagIds.push(Number(tagId))
+        })
+ 
         const newReview = new ReviewDomainObject(title,content,rating)
         newReview.categoryId = categoryId;
 
@@ -24,9 +34,9 @@ module.exports = {
     },
 
     async getReviews(req, res){
-        res.render("reviews", {review: await reviewService.findAll()});
+        res.render("reviews", { review: await reviewService.findAll()});
     },
-
+    
     async getNewReviewForm(req, res){
         res.render("submit-review", {category: await categoryService.findAll(), tag: await tagService.findAll()})
     }
