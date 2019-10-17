@@ -11,6 +11,12 @@ module.exports = {
         const content= req.body.content;
         const rating = req.body.rating;
         
+<<<<<<< HEAD
+        const categoryId = Number(req.body.category);
+        const tagStringId = req.body.tag;
+        const tagIds = [];
+        tagIds.push(Number(tagStringId));
+=======
         let tagStringId ;
 
             if(req.body.tag === undefined){
@@ -26,6 +32,7 @@ module.exports = {
             tagIds.push(Number(tagId))
         })
  
+>>>>>>> 0a37abd9ac8cb35e188097934af61ba8a89f4f95
         const newReview = new ReviewDomainObject(title,content,rating)
         await reviewService.addReview(newReview, tagIds)
         res.redirect("/reviews")

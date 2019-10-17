@@ -6,7 +6,15 @@ const TagController = require("../controllers/tagController");
 
 router.get("/", TagController.displayTags);
 
+
 router.post("/", TagController.newTag);
+
+router.get("/:id", TagController.reviewTag);
+
+
+
+
+r
 
 
 
