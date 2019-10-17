@@ -17,6 +17,7 @@ const Category = sequelize.define('categories', {
 });
 
 // Category.belongsToMany(Review, {through: Review});
-// Category.belongsToMany(Review, {through: 'category_review'})
-Review.belongsTo(Category, {through:'Category'});
+Category.hasMany(Review)
+Review.belongsTo(Category);
+
 module.exports = Category;
