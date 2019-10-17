@@ -16,7 +16,6 @@ const Category = sequelize.define('categories', {
     }
 });
 
-// Category.belongsToMany(Review, {through: Review});
 Category.hasMany(Review)
 Review.belongsTo(Category);
 

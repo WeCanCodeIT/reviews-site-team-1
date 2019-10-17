@@ -16,6 +16,7 @@ module.exports = {
     //     selectedCategory.getReview(categoryId)
     //     },
 
+
     async findById (id) {
         return await Category.findByPk(id)
     }

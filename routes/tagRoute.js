@@ -8,7 +8,9 @@ router.get("/", TagController.displayTags);
 
 router.post("/", TagController.newTag);
 
-router.get("/:id", TagController.reviewTag);
+// router.get("/:id", TagController.reviewTag);
+
+
 
 
 module.exports = router;
