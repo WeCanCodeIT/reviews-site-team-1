@@ -1,11 +1,12 @@
 <center><h1>Categories</h1>
+<link href="/stylesheets/categories.css" rel="stylesheet">
 
 {{#each category}}
         <a href="/categories/{{id}}">{{category}}</a>
 {{/each}}
 
 <label>
-    category:
+    Category:
     <select name="category">
         
         {{#each category}}
