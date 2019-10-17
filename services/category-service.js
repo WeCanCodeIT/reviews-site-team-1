@@ -10,6 +10,13 @@ module.exports = {
         const categoryToGet = await Category.findByPk(categoryId)
         return categoryToGet;
     },
+
+    // async findSome(categoryId) {
+    //     const selectedCategory = await Category.findAll(categoryId)
+    //     selectedCategory.getReview(categoryId)
+    //     },
+
+
     async findById (id) {
         return await Category.findByPk(id)
     }

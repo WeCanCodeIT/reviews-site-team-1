@@ -6,7 +6,6 @@ module.exports = {
         res.render("tags", {tags: await tagService.findAll()})
 
     },
-        
 
     async newTag (req, res) {
         const tagTitle = req.body.title;
@@ -15,11 +14,14 @@ module.exports = {
 
         await tagService.addTag(newTag);
         res.redirect("/tags")
-        },
-    
+
+    },
     async reviewTag (req, res) {
         const tagId = Number(req.params.id);
-        res.render("tagReview", {tag:await tagService.findSome(tagId)})
-        }
+        const tagCategory = await tagService.findSome(tagId)
+        tagCategory.reviews = await tagCategory.getReviews();
+       res.render("tagReview", {tag:tagCategory})
+       
+    }
 };
 
