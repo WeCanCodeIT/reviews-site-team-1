@@ -1,5 +1,6 @@
+<center>
 
-<center><h1> Tags</h1></center>
+<h1> Tags</h1>
 {{#each tags}}
 
         <p><a href="/tags/{{id}}">    {{tagTitle}}    </a></p>
@@ -7,7 +8,8 @@
 {{/each}}
 <br>
 <form action="/tags" method="POST">
-    <label>Add a tag: <input type="text" name="title" required/></label>
+    <label>Add a Tag: <input type="text" name="title" required/></label>
     <button>Submit</button>
 </form>
-    
+
+</center>

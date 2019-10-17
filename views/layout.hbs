@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' href='/stylesheets/categories.css' />
-    <link rel='stylesheet' href='/stylesheets/Tags.css' />
+    <title>Red Hawk Reviews</title>
     <link rel='stylesheet' href='/stylesheets/index.css'/>
+    {{!-- <link rel='stylesheet' href='/stylesheets/categories.css'/> --}}
   </head>
-  <body>
-    <header class="main-header">
+  <body>    
+    <header class="header"><h1>Red Hawk Reviews</h1></header>
       <div class="redbird"> <img src="https://cdn.pixabay.com/photo/2016/10/26/10/37/bird-1771116__480.png" height="150px" width="300px"></div> 
-      <h1 class="main-header__title">{{title}}</h1>
-        <nav class="navigation">
+        <nav class="navigation-bar">
           <ul class="navigation-bar"> 
             <li class="navigation-bar__item"><a href="/reviews">Reviews</a></li>
             <li class="navigation-bar__item"><a href="/reviews/new">Submit New Review</a></li>
@@ -17,12 +16,7 @@
             <li class="navigation-bar__item"><a href="/tags">Tags</a></li>
           </ul>
         </nav>
-    </header>
     {{{body}}}
   </body>
-  <footer>
-    <br>
-    <br>
-    <p class="footer__copyright">&copy; We Can Code It, Team 1. 2019</p>
-  </footer>
+  <footer>Review Site - Team 1<br>&copy;WCCI 2019</footer>
 </html>

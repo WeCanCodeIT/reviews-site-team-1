@@ -1,5 +1,5 @@
-<div class="review__form-container">
-<form action="/reviews" method="POST">
+<center>
+    <form action="/reviews" method="POST">
         <label>Title: <input type="text" name="title" required/></label>
         <label>Rating: <select name="rating">
             <option value="5">5 stars</option>
@@ -22,5 +22,5 @@
             <input name="tag" type="checkbox" value="{{id}}">{{tagTitle}}</label>
              {{/each}}
         <button>Submit</button>
-</form>
-</div>
+    </form>
+</center>
