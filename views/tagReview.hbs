@@ -1,12 +1,16 @@
 <div class="container">
-    <h1>Tag</h1>
+    <h1>{{tag.tagTitle}}</h1>
         <article class="user-card">  
             <ul>
-                {{#each tag}}
-                
-                <h3>{{title}}</h3>
-                <p>{{content}}</p>
-                <p>{{rating}}</p>
+                {{#each tag.reviews}}
+                <li>
+            <span>Titles : <span>{{title}}</span>
+            <span>{{content}}</span>
+            {{!-- <span>{{category}}</span> --}}
+            <span>{{rating}}</span>
+            <span>{{createdAt}}</span>
+            {{!-- <span>{{tags}}</span> --}}
+        </li>
                 {{/each}}
             </ul>
         </article>
