@@ -17,6 +17,4 @@ describe("categoryController", () => {
         expect(responseMock.render).toHaveBeenCalledTimes(1)
         expect(responseMock.render).toHaveBeenCalledWith("categories", {category: [] })
         })
-        
-    
 });

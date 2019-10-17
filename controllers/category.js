@@ -4,19 +4,16 @@ const reviewService = require("../services/review-service");
 module.exports = {
     async renderAll (req, res) {
         res.render("categories", {category: await categoryService.findAll()})
-            }
-    ,
-     async reviewCategory (req, res) {
-            const categoryId = Number(req.params.id);
-            const categoryReview = await categoryService.findSome(categoryId);
-            res.render("categoryReview", {categoryReview});
-          
-     },
-     
-     async generateCategories (req, res) {
+    },
 
-        await categoryService.addCategory(req);
-      
-         
-     }
+    async reviewCategory (req, res) {
+        const categoryId = Number(req.params.id);
+        const category = await categoryService.findCategory(categoryId);
+        category.reviews = await category.getReviews();
+        res.render("categoryReview", {category})
+    },
+     
+    async generateCategories (req, res) {
+        await categoryService.addCategory(req); 
     }
+};

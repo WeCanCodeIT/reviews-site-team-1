@@ -11,10 +11,10 @@ module.exports = {
         return await Category.findAll()
     },
 
-    async findSome(categoryId) {
-        const selectedCategory = await Category.findAll(categoryId)
-        Category.getReview(categoryId)
-        },
+    async findCategory (categoryId){
+        const categoryToGet = await Category.findByPk(categoryId)
+        return categoryToGet;
+    },
 
     async findById (id) {
         return await Category.findByPk(id)

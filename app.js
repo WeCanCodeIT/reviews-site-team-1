@@ -10,7 +10,6 @@ const  reviewRouter = require('./routes/review')
 const  generateStartingData  = require('./data/starting-data')
 const  sequelize = require("./utils/db");
 
-
 const  app = express(); 
 // view engine setup
 

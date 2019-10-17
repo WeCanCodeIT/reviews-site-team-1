@@ -17,6 +17,5 @@ describe("TagController", () => {
         expect(responseMock.render).toHaveBeenCalledTimes(1)
         expect(responseMock.render).toHaveBeenCalledWith("tags", {tags: [] })
         })
-        
-    
+         
 });

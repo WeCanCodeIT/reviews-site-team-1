@@ -2,7 +2,6 @@ const Category = require('../utils/category');
 const Tag = require('../utils/tag');
 
 
-
 const StartingCategories = [
     {categoryTitle : "Tattoos"},
     {categoryTitle : "Hair"},
@@ -13,7 +12,7 @@ const StartingTags = [
     {tagTitle : "Funny"},
     {tagTitle : "Sad"},
     {tagTitle : "Beautiful"},
-    {tagTitle : "Gorgeous"}
+    {tagTitle : "Ugly"}
 ]
 
 const generateStartingData = () => {
