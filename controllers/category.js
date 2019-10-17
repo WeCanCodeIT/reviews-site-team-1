@@ -3,7 +3,7 @@ const reviewService = require("../services/review-service");
 
 module.exports = {
     async renderAll (req, res) {
-        res.render("categories", {category: await categoryService.findAll()})
+
             },
     
      async reviewCategory (req, res) {
@@ -13,3 +13,4 @@ module.exports = {
             res.render("categoryReview", {category})          
         }
     }
+

@@ -7,6 +7,7 @@ const  indexRouter = require('./routes/index');
 const  tagRouter = require('./routes/tagRoute');
 const  categoryRouter = require('./routes/category');
 const  reviewRouter = require('./routes/review')
+const  generateStartingData  = require('./data/starting-data')
 const  sequelize = require("./utils/db");
 
 
@@ -43,8 +44,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-sequelize.sync()
-  .then(() => console.log('DB Connected'))
+sequelize.sync({force:true})
+  .then(() => {console.log('DB Connected')
+  generateStartingData()
+})
   .catch(console.error)
+
+// generate starting categories
+
+ 
 
 module.exports = app;
