@@ -12,9 +12,12 @@ module.exports = {
     async addTag (tag) {
         await Tags.create(tag);
     },
+
     async findSome(tagId){
         const tagToGet = await Tags.findByPk(tagId);
         return tagToGet.getReviews();
-
     }
-    };
+};
+
+
+
