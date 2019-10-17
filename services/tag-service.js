@@ -15,7 +15,7 @@ module.exports = {
 
     async findSome(tagId){
         const tagToGet = await Tags.findByPk(tagId);
-        return tagToGet.getReviews();
+        return tagToGet;
     }
 };
 
