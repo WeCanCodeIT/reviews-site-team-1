@@ -6,11 +6,17 @@ module.exports = {
         res.render("categories", {category: await categoryService.findAll()})
             }
     ,
-     async reviewCateogy (req, res) {
+     async reviewCategory (req, res) {
             const categoryId = Number(req.params.id);
             const categoryReview = await categoryService.findSome(categoryId);
             res.render("categoryReview", {categoryReview});
           
      },
+     
+     async generateCategories (req, res) {
+
+        await categoryService.addCategory(req);
+      
+         
+     }
     }
-    

@@ -3,7 +3,9 @@ const Category = require("../utils/category");
 
 module.exports = {
 
-
+    async addCategory(category) {
+        return await Category.create(category)
+    },
 
     async findAll() {
         return await Category.findAll()
